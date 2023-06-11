@@ -144,7 +144,7 @@ class NLPApp:
         for i in response['scored_labels']:
             L.append(i['score'])
 
-        index = sorted(list(enumerate(L)),key=lambda x:x[1],reverse=True)[0][0]
+        index = sorted(list(enumerate(L)),key=lambda x:x[1],reverse=True)[0][0][2]
 
 
         print(response['scored_labels'][index]['label'])
